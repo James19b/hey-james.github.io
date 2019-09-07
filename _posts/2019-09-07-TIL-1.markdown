@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "TIL 2019.09.07_Today I Leared 시작"
+date:   2019-09-07 17:53:36 +0530
+categories: Python JupyterNotebook Pandas Numpy 
+---
+스타트업에서 Project Manager를 하고있다.
+고객을 위한 서비스를 만들기 위해서는 데이터를 보는 것이 필수적이라고 생각하여 데이터사이언스 공부를 시작했다.
+매일 공부하면서도 매일 새롭기에 하루하루 공부하는 것을 기록에 남기고자한다.
+
+<!-- ```javascript
+const Razorpay = require('razorpay');
+
+let rzp = Razorpay({
+	key_id: 'KEY_ID',
+	secret: 'name'
+});
+
+// capture request
+rzp.capture(payment_id, cost)
+	.then(function (data) {
+		return 2;
+	})
+``` -->
+
+현재 공부중인 사이트 [Dataquest][site-Dataquest]
+자주 참고하는 사이트 [Do it Jump to Python][site-ref]
+
+[site-Dataquest]: https://dataquest.io
+[site-ref]:   https://wikidocs.net/book/1
+

@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "TIL 2019.09.08_Data Cleaning Basic"
+date:   2019-09-08 00:00:00 +0530
+categories: Python Pandas DataCleaning
+---
+"Data scientists commonly spend [over half their time cleaning data][Cleaning Big Data], so knowing how to clean "messy" data is an extremely important skill."
+
+Data Cleaning 
+
+1)컬럼 이름에 오류가 없는지 확인(whitespace 제거)
+내가 쓴 코드
+```python
+new_columns = []
+
+unconfirmed_columns = laptops.columns
+
+for col in unconfirmed_columns:
+    new_col = col.strip()
+    new_columns.append(new_col)
+    
+laptops.columns = new_columns
+```
+
+Dataquest가 쓴 코드
+```python
+new_columns = []
+for c in laptops.columns:
+    clean_c = c.strip()
+    new_columns.append(clean_c)
+    
+laptops.columns = new_columns
+```
+dataframe.columns의 결과물은 list이고 해당 list는 바로 for문에 사용할 수 있다.
+
+[Cleaning Big Data]: https://www.forbes.com/sites/gilpress/2016/03/23/data-preparation-most-time-consuming-least-enjoyable-data-science-task-survey-says/#42b91e7e6f63
+

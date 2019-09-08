@@ -9,6 +9,7 @@ categories: Python Pandas DataCleaning
 Data Cleaning 
 
 1)컬럼 이름에 오류가 없는지 확인(whitespace 제거)
+
 내가 쓴 코드
 ```python
 new_columns = []

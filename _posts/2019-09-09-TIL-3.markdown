@@ -9,10 +9,11 @@ categories: Python Pandas DataCleaning
 
 1)Series.map() method
 ```python
-laptops["os"].value_counts()로 뽑은 데이터가 아래와 같은 형태이다. 아래의 데이터에서 동일하게 분류되어야하는 macOS와 Mac OS가 분할되어 있다. 이러한 데이터를 정제할 때 사용하는 method가 series.map()이다
+laptops["os"].value_counts()
 ```
+위의 코드로 뽑은 데이터는 아래와 같다. 아래의 데이터에서 동일하게 분류되어야하는 macOS와 Mac OS가 분할되어 있다. 이러한 데이터를 정제할 때 사용하는 method가 series.map()이다
 | os        | count           | 
-| ------------- |:-------------:| 
+| ------------- |------------| 
 | Windows       |       1125    | 
 | No OS         | 66            |   
 | Linux | 62     |

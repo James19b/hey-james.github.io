@@ -9,7 +9,7 @@ categories: Python Pandas DataCleaning
 [Data Cleaning]
 
 1)column label
-neline_to_br
+<br/>
 내가 쓴 코드
 ```python
 new_columns = []
@@ -58,7 +58,7 @@ laptops.columns = new_columns
 column을 정리하는데 필요한 동작들을 함수로 정의, for문을 통해 column label 전체에 적용하여 원하는 형태의 column label을 생성한다
 
 2)convert data type
-neline_to_br
+<br/>
 workflow
 (1)Explore the data in column
 "unique method를 통해 column에 존재하는 unique data를 추출한다"

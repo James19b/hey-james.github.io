@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "TIL 2019.09.09_Data Cleaning Basic"
+date:   2019-09-09 00:00:00 +0530
+categories: Python Pandas DataCleaning
+---
+
+[Data Cleaning]
+
+1)Series.map() method
+```python
+laptops["os"].value_counts()로 뽑은 데이터가 아래와 같은 형태이다. 아래의 데이터에서 동일하게 분류되어야하는 macOS와 Mac OS가 분할되어 있다. 이러한 데이터를 정제할 때 사용하는 method가 series.map()이다
+```
+| os        | count           | 
+| ------------- |:-------------:| 
+| Windows       |       1125    | 
+| No OS         | 66            |   
+| Linux | 62     |
+| Chrome OS  | 27   |
+| macOS  | 13     |
+| Mac OS  | 8     |
+| Android  | 2     |
+
+<br/>
+```python
+mapping_dict = {
+    'Android': 'Android',
+    'Chrome OS': 'Chrome OS',
+    'Linux': 'Linux',
+    'Mac OS': 'macOS',
+    'No OS': 'No OS',
+    'Windows': 'Windows',
+    'macOS': 'macOS'
+}
+
+laptops["os"] = laptops["os"].map(mapping_dict)
+```
+우선 기존 series 내에 존재하는 개별 데이터를 key로하고 변경할 데이터를 value로 가지는 dictionary를 만든다.(Series.value_counts에서 나타난 모든 데이터를 key로 가져야한다)
+<br/>
+그리고 만들어진 dictionary를 parameter로 지정하여 series.map() method를 사용한다
+<br/>
+결과
+| os        | count           | 
+| ------------- |:-------------:| 
+| Windows       |       1125    | 
+| No OS         | 66            |   
+| Linux | 62     |
+| Chrome OS  | 27   |
+| macOS  | 21     |
+| Android  | 2     |
